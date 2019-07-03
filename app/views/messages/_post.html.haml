@@ -1,0 +1,9 @@
+.row
+  .col.s12.m6
+    .card
+      .card-content
+        = message.text
+      - if user_signed_in? && message.user_id == current_user.id
+        .card-action
+          = link_to "EDIT", edit_message_path(message.id), class: "blue-text text-blue"
+          = link_to "DESTROY", message_path(message.id), method: :delete,  class: "blue-text text-blue"
