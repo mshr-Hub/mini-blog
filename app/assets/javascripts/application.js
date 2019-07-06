@@ -14,3 +14,17 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $('#destroy-btn').click(function(e) {
+    var result = window.confirm('投稿を削除しますか？')
+    e.preventDefault();
+    if (result) {
+      window.alert('投稿が削除されました')
+    }
+    else {
+      e.stopPropagation();
+      window.alert('投稿の削除が取り消されました')
+    }
+  });
+});
