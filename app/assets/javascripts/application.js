@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(function() {
-  $('#destroy-btn').click(function(e) {
+  $('.destroy-btn').click(function(e) {
     var result = window.confirm('投稿を削除しますか？')
     e.preventDefault();
     if (result) {
