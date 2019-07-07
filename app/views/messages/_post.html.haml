@@ -2,7 +2,9 @@
   .col.s12.m6
     .card
       .card-content
-        = message.text
+        = simple_format(message.text)
+      .card-date
+        = message.created_at.strftime("%Y年%m月%d日 %H:%M")
       - if user_signed_in? && message.user_id == current_user.id
         .card-action
           = link_to "EDIT", edit_message_path(message.id), class: "blue-text text-blue"
