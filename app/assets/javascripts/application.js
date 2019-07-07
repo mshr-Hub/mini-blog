@@ -17,14 +17,25 @@
 
 $(function() {
   $('.destroy-btn').click(function(e) {
-    var result = window.confirm('投稿を削除しますか？')
+    var result = window.confirm('本当にこの投稿を消しちまっていいのか？')
     e.preventDefault();
     if (result) {
-      window.alert('投稿の削除が実行されました')
+      e.stopPropagation();
+      console.log('OK');
+      window.alert('オレ達がやってきたこと全部、無かったことになんてできねーんだってばよ！！')
     }
     else {
       e.stopPropagation();
-      window.alert('投稿の削除が取り消されました')
+      console.log('cancel');
+      window.alert('キャンセルしたってばよ！')
     }
+  });
+});
+
+$(function() {
+  $('.rasengan').click(function(e) {
+    e.preventDefault();
+    console.log('delete');
+    window.alert('螺旋丸！！')
   });
 });
