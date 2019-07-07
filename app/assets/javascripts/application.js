@@ -20,7 +20,7 @@ $(function() {
     var result = window.confirm('投稿を削除しますか？')
     e.preventDefault();
     if (result) {
-      window.alert('投稿が削除されました')
+      window.alert('投稿の削除が実行されました')
     }
     else {
       e.stopPropagation();
