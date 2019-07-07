@@ -1,15 +1,15 @@
 .navbar-fixed
-  %nav.blue
+  %nav{class: "orange lighten-1"}
     .nav-wrapper
-      = link_to "Mini Blog", root_path, class: "brand-logo"
+      = link_to "NARUTter", root_path, class: "brand-logo"
       %ul#nav-mobile.right.hide-on-med-and-down
         - if user_signed_in?
           %li
-            = link_to "SignOut", "/users/sign_out", method: :delete
+            = link_to "Sign Out", "/users/sign_out", method: :delete
           %li
-            = link_to "NewPost", "/messages/new"
+            = link_to "New Post", "/messages/new"
         - else
           %li
-            = link_to "SignUp", "/users/sign_up"
+            = link_to "Sign Up", "/users/sign_up"
           %li
-            = link_to "LogIn", "/users/sign_in"
+            = link_to "Log In", "/users/sign_in"
