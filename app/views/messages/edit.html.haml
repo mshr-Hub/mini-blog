@@ -2,6 +2,6 @@
   = form_for [@message], class: "col s12" do |f|
     .row
       .input-field.col.s12.m6
-        = f.text_area :text, id: "textarea1", class: "materialize-textarea"
+        = f.text_field :text, id: "textarea1", class: "materialize-textarea"
         = f.label "Edit Text", for: "textarea1", class: "active"
         = f.submit "Submit", class: "btn waves-effect waves-light blue"
