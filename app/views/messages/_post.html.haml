@@ -3,9 +3,13 @@
     .card
       .card-content
         = simple_format(message.text)
+        %br/
+        .card-content__naruto
+          だってばよ
       .card-date
         = message.updated_at.strftime("%Y年%m月%d日 %H:%M")
       - if user_signed_in? && message.user_id == current_user.id
         .card-action
-          = link_to "EDIT", edit_message_path(message.id), class: "blue-text text-blue"
-          = link_to "DESTROY", message_path(message.id), method: :delete,  class: "blue-text text-blue destroy-btn"
+          = link_to "EDIT", edit_message_path(message.id), class: "orenge-text text-orenge"
+          = link_to "DESTROY", message_path(message.id), method: :delete, class: "orenge-text text-orenge destroy-btn"
+          = link_to "螺旋丸！", message_path(message.id), method: :delete, class: "blue-text text-bule rasengan"
