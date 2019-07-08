@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(function() {
-  $('.destroy-btn').click(function(e) {
+  $('.destroy-btn').on("click", function(e) {
     var result = window.confirm('本当にこの投稿を消しちまっていいのか？')
     e.preventDefault();
     if (result) {
@@ -33,7 +33,7 @@ $(function() {
 });
 
 $(function() {
-  $('.rasengan').click(function(e) {
+  $('.rasengan').on("click", function(e) {
     e.preventDefault();
     console.log('delete');
     window.alert('螺旋丸！！')
