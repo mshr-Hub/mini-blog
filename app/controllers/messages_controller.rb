@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 
   def create
     Message.create(message_params)
-    redirect_to action: :index
+    move_to_index
   end
 
   def edit
@@ -19,12 +19,12 @@ class MessagesController < ApplicationController
 
   def update
     @message.update(message_params)
-    redirect_to action: :index
+    move_to_index
   end
 
   def destroy
     @message.destroy
-    redirect_to action: :index
+    move_to_index
   end
 
   private
@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:text).merge(user_id: current_user.id)
   end
 
-  # def move_to_index
-  #   redirect_to action: :index
-  # end
+  def move_to_index
+    redirect_to action: :index
+  end
 end
