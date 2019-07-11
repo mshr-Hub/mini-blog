@@ -5,7 +5,7 @@ $(function() {
     if (result) {
       e.stopPropagation();
       console.log('OK');
-      window.alert('オレ達がやってきたこと全部、無かったことになんてできねーんだってばよ！！')
+      window.alert('まっすぐ自分の投稿は消さねえ…　それがオレの忍道だ!!')
     }
     else {
       e.stopPropagation();
